@@ -107,5 +107,5 @@ IE6下就不要给tr和tbody同时加背景样式
 如果有新发现，请继续补充
 
 参考资料：
-w3help.org/zh-cn/causes/index.html
+http://w3help.org/zh-cn/causes/index.html
 
