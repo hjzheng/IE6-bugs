@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.box{border:10px solid #000;width:600px; overflow:hidden;}
+.box div{width:100px;height:100px;background:Red;margin:20px;border:5px solid #ccc; float:left; display:inline;}
+/*
+	当一行子元素占有的宽度之和和父级的宽度相差超过3px,或者有不满行状态的时候,最后一行子元素的下margin在IE6下就会失效
+*/
+</style>
+</head>
+<body>
+<div class="box">
+	<div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+</body>
+</html>

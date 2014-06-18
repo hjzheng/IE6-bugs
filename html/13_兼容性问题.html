@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.box{ width:400px;}
+.left{float:left;}
+.right{width:400px;float:right;}
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="left"></div>
+    <div><!-- IE6下的文字溢出BUG --><span></span></div>
+    <div class="right">&darr;leo是个大胖子</div>
+</div>
+<!--
+	在IE6下的文字溢出BUG
+    
+    子元素的宽度和父级的宽度相差小于3px的时候,两个浮动元素中间有注释或者内嵌元素
+    
+    解决办法:用div把注释或者内嵌元素用div包起来	
+-->
+</body>
+</html>

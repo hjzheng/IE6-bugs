@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+ul{margin:0;padding:0;width:302px;}
+li{ list-style:none;height:12px;border:1px solid #000;overflow:hidden; float:left;width:300px;}
+a{width:100px;float:left;height:12px;background:Red;}
+span{width:100px;float:right;height:12px;background:blue;}
+/*
+	在IE6，7下，li本身没浮动，但是li的内容有浮动，li下边就会产生一个间隙
+	解决办法:
+		1.给li加浮动
+		2.给li加vertical-align
+		
+		当IE6下最小高度问题，和 li的间隙问题共存的时候 给li加浮动
+*/
+</style>
+</head>
+<body>
+<ul>
+	<li>
+    	<a href="#"></a>
+        <span></span>
+    </li>
+    <li>
+    	<a href="#"></a>
+        <span></span>
+    </li>
+    <li>
+    	<a href="#"></a>
+        <span></span>
+    </li>
+</ul>
+</body>
+</html>

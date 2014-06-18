@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.box{ width:200px;height:200px;border:1px solid #000; overflow:auto; position:relative;}
+.div{ width:150px;height:300px;background:yellow; position:relative;}
+/*
+	在IE6，7下，子元素有相对定位的话，父级的overflow包不住子元素
+	
+	解决办法: 给父级也加相对定位
+*/
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="div"></div>
+</div>
+</body>
+</html>
