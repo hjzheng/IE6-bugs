@@ -112,6 +112,7 @@ IE6不支持png24图片
 
 #### 23：
 IE6 !important bug
+在IE6下 在important 后边在家一条同样的样式，会破坏掉important的作用，会按照默认的优先级顺序来走
 
 如果有新发现，请继续补充
 
