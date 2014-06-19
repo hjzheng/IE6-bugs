@@ -103,6 +103,15 @@ IE6下就不要给tr和tbody同时加背景样式
 #### 21.
 在IE6，7下输入类型的表单控件输入文字的时候，背景图片会跟着一块移动
 解决办法: 把背景加给父级
+ 
+#### 22.
+IE6不支持png24图片
+解决方法：
+1.使用js （http://dillerdesign.com/experiment/DD_belatedPNG/DD_belatedPNG_0.0.8a.js）
+2.使用filter
+
+#### 23：
+IE6 !important bug
 
 如果有新发现，请继续补充
 
