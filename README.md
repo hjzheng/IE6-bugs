@@ -106,12 +106,14 @@ IE6下就不要给tr和tbody同时加背景样式
  
 #### 22.
 IE6不支持png24图片
+
 解决方法：
+
 1.使用js （http://dillerdesign.com/experiment/DD_belatedPNG/DD_belatedPNG_0.0.8a.js）
+
 2.使用filter
 
 #### 23：
-IE6 !important bug
 在IE6下 在important 后边在家一条同样的样式，会破坏掉important的作用，会按照默认的优先级顺序来走
 
 如果有新发现，请继续补充
