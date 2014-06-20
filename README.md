@@ -145,11 +145,28 @@ IE6不支持png24图片
 IE6,7,8下，不加docType的话，页面盒模型出现怪异模式
 
 #### 25:
-childNodes 在标准浏览器中包含了文本和元素类型的节点，非标准的IE6,7,8下，只包含元素节点。
+childNodes 在标准浏览器中包含了文本（注意：换行会被解析成文本）和元素类型的节点，非标准的IE6,7,8下，只包含元素节点。
 
 解决方法：
 
-使用children属性替代childNodes， 只去元素节点
+使用children属性替代childNodes， 只取元素节点
+
+#### 26：
+IE6,7,8不支持 firstElementChild, lastElementChild nextElementSibling and previousElementSibling
+
+解决方法:
+
+兼容写法 ofirst = ele.firstElementChild || firstChild, 但是这种写法会在下面情况下出问题
+```html
+<!--注意下面ul中有换行 上面的方法在标准浏览器会拿到文本节点-->
+<ul>
+</ul>
+```
+处理方法：
+
+ele.children[0]
+
+
 
 如果有新发现，请继续补充
 
