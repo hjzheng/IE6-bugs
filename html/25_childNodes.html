@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function() {
+	
+	var oUl = document.getElementById('ul1');
+	
+	/*
+		元素.childNodes : 只读 属性 子节点列表集合
+			标准下：包含了文本和元素类型的节点，也会包含非法嵌套的子节点
+			非标准下：只包含元素类型的节点，ie7以下不会包含非法嵌套子节点
+			
+			childNodes只包含一级子节点，不包含后辈孙级以下的节点
+		
+		DOM节点的类型有很多种	12种
+		
+		元素.nodeType : 只读 属性 当前元素的节点类型
+		
+		元素节点	:	1
+		属性节点	:	2
+		文本节点 :	3
+	*/
+	
+	alert( oUl.childNodes.length );
+	
+	//alert( oUl.nodeType );
+	
+	//alert(oUl.childNodes[0].nodeType);
+	
+	//属性
+	// 元素.attributes : 只读 属性 属性列表集合
+	
+	//alert( oUl.attributes.length );
+	
+	//alert( oUl.attributes[0].nodeType );
+	
+	/*for (var i=0; i<oUl.childNodes.length; i++) {
+		
+		if ( oUl.childNodes[i].nodeType == 1 ) {
+			oUl.childNodes[i].style.background = 'red';
+		}
+		
+	}*/
+	
+}
+</script>
+</head>
+
+<body>
+	<ul id="ul1" style="border: 1px solid red;">
+        <li>11111 <span>span</span></li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <p>pppppppp</p>
+    </ul>
+</body>
+</html>
