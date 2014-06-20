@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function() {
+	
+	var oUl = document.getElementById('ul1');
+	//alert(oUl.firstElementChild)
+	var oFirst = oUl.firstElementChild || oUl.firstChild;
+	//alert(oFirst)
+	/*if ( oFirst ) {
+		oFirst.style.background = 'red';
+	} else {
+		alert( '没有子节点可以设置' );
+	}*/
+	
+	if ( oUl.children[0] ) {
+		oUl.children[0].style.background = 'red';
+	} else {
+		alert( '没有子节点可以设置' );
+	}
+	
+}
+</script>
+</head>
+
+<body>
+	<ul id="ul1">
+    </ul>
+</body>
+</html>
