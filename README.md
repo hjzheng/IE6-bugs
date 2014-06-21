@@ -184,6 +184,20 @@ offsetParent 返回元素已定位的最近父级元素, 如果元素的所有�
 ele.currentStyle.hasLayout
 ```
 
+#### 28:
+
+HTML结构对dom的影响 例如：
+```html
+<ul>
+ <li></li>
+ <li></li>
+ <li></li>
+ <li></li>
+ <p></p>
+</ul>
+```
+上面的结构在IE6 7会将p元素解析成最后一个li元素的子元素，所以必须编写符合规范的HTML结构
+
 如果有新发现，请继续补充
 
 参考资料：
