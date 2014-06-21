@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function() {
+	
+	var oDiv = document.getElementById('div1');
+	
+	/*
+		width height
+		style.width : 样式宽
+		clientWidth : 可视区宽
+		offsetWidth	: 占位宽
+	*/
+	
+	alert( oDiv.style.width );	//100
+	alert( oDiv.clientWidth );	//样式宽 + padding	120
+	alert( oDiv.offsetWidth );	//样式宽 + padding + border  可视区宽 + 边框	122
+	
+}
+</script>
+</head>
+
+<body>
+	<div id="div1" style="width: 100px; height: 100px; border: 1px solid red; padding: 10px; margin: 10px;"></div>
+</body>
+</html>
