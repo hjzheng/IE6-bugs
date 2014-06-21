@@ -156,7 +156,7 @@ IE6,7,8不支持 firstElementChild, lastElementChild nextElementSibling and prev
 
 解决方法:
 
-兼容写法 ofirst = ele.firstElementChild || firstChild, 但是这种写法会在下面情况下出问题
+兼容写法 ofirst = ele.firstElementChild || firstChild, 但是这种写法会在下面的HTML结构情况（换行在标准浏览器下解析 成文本元素）下出问题
 ```html
 <!--注意下面ul中有换行 上面的方法在标准浏览器会拿到文本节点-->
 <ul>
