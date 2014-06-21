@@ -178,7 +178,7 @@ offsetParent 返回元素已定位的最近父级元素, 如果元素的所有�
 在IE6,7中会存在两种特殊情况：
 
  * 如果当前元素没有定位默认是body，如果有定位则是html
- * 如果当前元素的某个父级触发了layout，那么offsetParent就会被指向到这个触发了layout特性的父节点上
+ * 如果当前元素的某个父级触发了hasLayout，那么offsetParent就会被指向到这个触发了hasLayout特性的父节点上
 
 ```javascript
 ele.currentStyle.hasLayout
