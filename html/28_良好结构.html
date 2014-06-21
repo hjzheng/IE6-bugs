@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function() {
+	
+	var oUl = document.getElementById('ul1');
+	
+	/*
+		元素.children : 只读 属性 子节点列表集合
+			标准下：只包含元素类型的节点
+			非标准下：只包含元素类型的节点
+	*/
+	
+	//alert( oUl.children.length );
+	
+	for (var i=0; i<oUl.children.length; i++) {
+		
+		oUl.children[i].style.background = 'red';
+		
+	}
+	
+}
+</script>
+</head>
+
+<body>
+	<ul id="ul1" style="border: 1px solid red;">
+        <li>11111 <span>span</span></li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <p>pppppppp</p>
+    </ul>
+</body>
+</html>
