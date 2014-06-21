@@ -3,6 +3,8 @@ IE6-bugs
 （内容来自妙味课堂笔记）
 注意: html文件夹中有对应bug重现的html页面
 
+### CSS兼容性或bug
+
 #### 1.
 计算一定要精确 不要让内容的宽高超出我们设置的宽高
 在IE6下，内容会撑开设置好的宽高
@@ -144,6 +146,9 @@ IE6不支持png24图片
 #### 24:
 IE6,7,8下，不加docType的话，页面盒模型出现怪异模式
 
+
+### DOM中的兼容性或bug
+
 #### 25:
 childNodes 在标准浏览器中包含了文本（注意：换行会被解析成文本）和元素类型的节点，非标准的IE6,7,8下，只包含元素节点。
 
@@ -152,7 +157,7 @@ childNodes 在标准浏览器中包含了文本（注意：换行会被解析成
 使用children属性替代childNodes， 只取元素节点
 
 #### 26：
-IE6,7,8不支持 firstElementChild, lastElementChild nextElementSibling and previousElementSibling
+IE6,7,8不支持 firstElementChild, lastElementChild， nextElementSibling， previousElementSibling and parentElement
 
 解决方法:
 
@@ -166,7 +171,18 @@ IE6,7,8不支持 firstElementChild, lastElementChild nextElementSibling and prev
 
 ele.children[0]
 
+#### 27：
 
+offsetParent 返回元素已定位的最近父级元素, 如果元素的所有父级元素都没有定位，则返回body
+
+在IE6,7中会存在两种特殊情况：
+
+ * 如果当前元素没有定位默认是body，如果有定位则是html
+ * 如果当前元素的某个父级触发了layout，那么offsetParent就会被指向到这个触发了layout特性的父节点上
+
+```javascript
+ele.currentStyle.hasLayout
+```
 
 如果有新发现，请继续补充
 
