@@ -218,9 +218,10 @@ HTML结构对dom的影响 例如：
 
 #### 30:
 正常情况下是没有问题的：
-    - style.width : 样式宽
-   	- clientWidth : 可视区宽 (样式宽 + padding) 注意滚动条情况下
-   	- offsetWidth	: 占位宽 (样式宽 + padding + border  可视区宽 + 边框)
+
+- style.width : 样式宽
+- clientWidth : 可视区宽 (样式宽 + padding) 注意滚动条情况下
+- offsetWidth : 占位宽 (样式宽 + padding + border  可视区宽 + 边框)
 
 怪异盒模型（未测试）
 
