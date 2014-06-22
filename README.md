@@ -225,6 +225,12 @@ HTML结构对dom的影响 例如：
 
 怪异盒模型（未测试）
 
+#### 31:
+body.offsetLeft or body.offsetTop
+- 标准浏览器  0
+- IE6,7 body的margin值
+
+
 如果有新发现，请继续补充
 
 参考资料：
