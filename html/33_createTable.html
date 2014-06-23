@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number(value) VS parseInt(value) VS parseFloat(value)</title>
+    <style>
+        body {
+            line-height: 1.6em;
+        }
+
+        .table {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 12px;
+            background: #fff;
+            margin: 45px;
+            width: 880px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .table caption {
+            font-size: 16px;
+            font-weight: bold;
+            color: #039;
+            padding: 10px 8px;
+            border-bottom: 2px solid #6678b1;
+        }
+
+        .table th {
+            font-size: 14px;
+            font-weight: normal;
+            color: #039;
+            padding: 10px 8px;
+            border-bottom: 2px solid #6678b1;
+        }
+
+        .table td {
+            color: #669;
+            padding: 9px 8px 0px 8px;
+        }
+
+        .table tr:hover td {
+            color: #009;
+            border-bottom: 1px dotted #6678b1;
+        }
+
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        var typeTestStrings = ["1", "+1", "-1", "0", "1.01", "-1.01", ".56", "0777", "0x777", "Number.MAX_VALUE", "Number.MIN_VALUE",
+            "true", "false",
+            "new Date()", "new Error()",
+            "[]", "[10]", "[10, 11]",
+            "new Function(\"0\")",
+            "/123/g",
+            "{}", "{1:0}",
+            "null", "undefined",
+            "\"123\"", "\"-123\"", "\"+123\"", "\"--123\"", "\"123abc\"", "\"abc123\"", "\"0777\"", "\"0x777\"", "\"22.22.2\"", "\"3.125e7\""
+        ];
+
+
+        var typeTestObjs = [1, +1, -1, 0, 1.01, -1.01, .56, 0777, 0x777, Number.MAX_VALUE, Number.MIN_VALUE,
+            true, false,
+            new Date(), new Error(),
+            [], [10], [10, 11] ,
+            new Function("0"),
+            /123/g,
+            {}, {1:0},
+            null, undefined,
+            "123", "-123", "+123", "--123.22", "123abc", "abc123", "0777", "0x777", "22.22.2", "3.125e7"
+        ];
+
+        var table = document.getElementById("Table");
+
+        for(var i=0; i<typeTestStrings.length; i++){
+            var row = table.insertRow(table.rows.length);
+            var cell0 = row.insertCell(0);
+            cell0.innerHTML = typeTestStrings[i];
+            var cell1 = row.insertCell(1);
+            cell1.innerHTML = (Number(typeTestObjs[i]));
+            var cell2 = row.insertCell(2);
+            cell2.innerHTML = (parseInt(typeTestObjs[i]));
+            var cell3 = row.insertCell(3);
+            cell3.innerHTML = (parseFloat(typeTestObjs[i]));
+        }
+
+        //tBodies, rows, tHead, tFoot and cells
+        //table.tBodies[0].rows[0].cells[0].innerHTML
+        //table.tHead.rows[0].cells[0].innerHTML
+
+
+    }
+</script>
+
+<body>
+<table id="Table" class="table">
+    <caption>Number(value) VS parseInt(value) VS parseFloat(value)</caption>
+    <tr><th>value</th><th>Number(value)</th><th>parseInt(value)</th><th>parseFloat(value)</th></tr>
+</table>
+</body>
+</html>

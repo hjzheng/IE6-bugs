@@ -234,6 +234,12 @@ body.offsetLeft or body.offsetTop
 标准浏览器支持 getElementsByClassName 方法
 非标准浏览器不支持该方法
 
+#### 33:
+创建一个table: 兼容写法
+注意运用: 
+- insertRow and insertCell
+- tBodies, tHead, tFoot, rows and cells
+
 解决方法：参见对应HTML页面
 
 如果有新发现，请继续补充
