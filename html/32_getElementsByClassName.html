@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function () {
+            function getElementsByClassName(ele, tagName, className) {
+                var arr = [];
+                var eles = ele.getElementsByTagName(tagName);
+                var reg = new RegExp(className);
+
+                for(var i=0; i<eles.length; i++){
+                    if(reg.test(eles[i].className)){
+                        arr.push(eles[i]);
+                    }
+                }
+
+                return arr;
+            }
+
+            function removeClass(ele, className) {
+                var reg = new RegExp(className, "g");
+                if(reg.test(ele.className)) {
+                    ele.className = ele.className.replace(reg, "");
+                }
+            }
+
+            function addClass(ele, className) {
+                var reg = new RegExp(className);
+                if(!reg.test(ele.className)) {
+                    ele.className += (" " + ele.className);
+                }
+            }
+
+            var divs = getElementsByClassName(document, "*", "box");
+            console.log(divs);
+            for(var i=0; i<divs.length; i++){
+                divs[i].style.background = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box">111</div>
+    <div>222</div>
+    <div class="box1 box">333</div>
+    <div class="box box">444</div>
+    <div class="box1">555</div>
+</body>
+</html>

@@ -230,6 +230,11 @@ body.offsetLeft or body.offsetTop
 - 标准浏览器  0
 - IE6,7 body的margin值
 
+#### 32:
+标准浏览器支持 getElementsByClassName 方法
+非标准浏览器不支持该方法
+
+解决方法：参见对应HTML页面
 
 如果有新发现，请继续补充
 
