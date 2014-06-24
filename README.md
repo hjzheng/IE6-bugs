@@ -269,7 +269,7 @@ document.documentElement.clientHeight
 ```
 滚动距离：
 ```javascript
-document.documentElement.scrollTop/scrollLeft 在chrome下这个值始终为0
+document.documentElement.scrollTop/scrollLeft //在chrome下这个值始终为0
 document.body.scrollTop/scrollLeft
 ```
 兼容写法: 
