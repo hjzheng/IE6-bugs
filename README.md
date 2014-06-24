@@ -289,6 +289,7 @@ document.body.offsetHeight //所以推荐使用body.offsetHeight
 document.documentElement.offsetHeight //IE下不兼容，始终显示可视高度
 ```
 
+
 如果有新发现，请继续补充
 
 参考资料：
