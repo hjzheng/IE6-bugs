@@ -250,6 +250,17 @@ onchange事件，触发时机
     - 标准下，点击，值如果改变就触发onchange事件
     - 非标准下， 点击，并且焦点离开时，如果值发生改变，触发onchange事件
 
+### BOM中的兼容性或bug
+
+#### 35:
+
+window.close()
+- Firefox 无法关闭
+- Chrome 立即关闭
+- IE 询问是否关闭
+
+注意: window.open() 不存在兼容问题, 该方法返回打开新窗口的window对象
+
 如果有新发现，请继续补充
 
 参考资料：
