@@ -242,6 +242,14 @@ body.offsetLeft or body.offsetTop
 
 解决方法：参见对应HTML页面
 
+#### 34:
+onchange事件，触发时机
+
+- text文本输入框:  当光标离开元素的时候再去判断值是否发生了变化，如果发生了变化则触发onchange事件
+- radio/checkbox: 
+    - 标准下，点击，值如果改变就触发onchange事件
+    - 非标准下， 点击，并且焦点离开时，如果值发生改变，触发onchange事件
+
 如果有新发现，请继续补充
 
 参考资料：

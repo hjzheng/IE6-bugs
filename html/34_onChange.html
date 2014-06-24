@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+        window.onload = function() {
+
+            var oForm = document.getElementById('form1');
+            var oBtn = document.getElementById('btn');
+
+            //表单元素的访问： form.username.value
+            //对于像checkbox和radio这样的组元素 form.sex[0].value  form.sex.length 通过for循环查找checked是否为true
+
+            //对于select值的访问 form.select.value 就可以拿到当前选中的值
+
+            //onchange : 当值发生改变的时候触发
+
+            //text : 当光标离开元素的时候再去判断值是否发生了变化，如果发生了变化则触发onchange事件
+            //radio/checkbox : 标准下，点击，值如果改变就触发onchange事件
+            //                 非标准下， 点击，并且焦点离开时，如果值发生改变，触发onchange事件
+            /*oForm.username.onchange = function() {
+             alert('值变了');
+             }*/
+
+            /*oForm.sex[0].onchange = function() {
+             alert(1);
+             }*/
+
+            for (var i=0; i<oForm.aihao.length; i++) {
+
+                oForm.aihao[i].onchange = function() {
+
+                    //alert(1);
+
+                    if (this.checked) {
+                        alert('你选择了：' + this.value);
+                    } else {
+                        alert('你取消了：' + this.value);
+                    }
+
+                }
+
+            }
+
+            oForm.city.onchange = function() {
+                alert(this.value);
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<form id="form1">
+    <input type="text" name="username" />
+    <input type="radio" name="sex" value="男" />男
+    <input type="radio" name="sex" value="女" checked />女
+
+    <input type="checkbox" name="aihao" value="电影" />电影
+    <input type="checkbox" name="aihao" value="音乐" />音乐
+    <input type="checkbox" name="aihao" value="体育" />体育
+
+    <select name="city" value="">
+        <option>请选择一个城市</option>
+        <option value="北京">北京</option>
+        <option value="上海" selected>上海</option>
+        <option value="广州">广州</option>
+        <option value="深圳">深圳</option>
+    </select>
+
+    <input type="button" value="按钮" id="btn" />
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>
