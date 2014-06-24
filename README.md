@@ -261,6 +261,34 @@ window.close()
 
 注意: window.open() 不存在兼容问题, 该方法返回打开新窗口的window对象
 
+#### 36：
+可视区大小：
+```javascript
+document.documentElement.clientWidth
+document.documentElement.clientHeight
+```
+滚动距离：
+```javascript
+document.documentElement.scrollTop/scrollLeft 在chrome下这个值始终为0
+document.body.scrollTop/scrollLeft
+```
+兼容写法: 
+```javascript
+var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+```
+内容高:
+```javascript
+//下面在body margin为0情况下是一样的
+document.body.scrollHeight
+document.document.scrollHeight
+```
+
+文档高度：
+```javascript
+document.body.offsetHeight //所以推荐使用body.offsetHeight
+document.documentElement.offsetHeight //IE下不兼容，始终显示可视高度
+```
+
 如果有新发现，请继续补充
 
 参考资料：

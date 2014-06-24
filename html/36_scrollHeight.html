@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+    window.onload = function () {
+        //可视区域宽高
+        //document.documentElement.clientWidth;
+        //alert(document.documentElement.clientHeight)
+
+        //滚动距离
+        //alert(document.documentElement.scrollTop); //chrome下始终为0
+        //alert(document.body.scrollTop);
+        //alert(document.documentElement.scrollTop || document.body.scrollTop); //兼容写法
+
+        //内容高度 (下面两着高度一样)
+        //alert(document.documentElement.scrollHeight);
+        //alert(document.body.scrollHeight);
+
+        //文档高度
+        alert(document.documentElement.offsetHeight); //IE下不兼容，始终显示可视高度，应该是2000px
+        alert(document.body.offsetHeight); //所以推荐使用body.offsetHeight
+    }
+    </script>
+</head>
+<body style="height: 2000px; margin: 0px;">
+
+</body>
+</html>
