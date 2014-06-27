@@ -331,6 +331,13 @@ function bind(obj, eventName, fn){
 }
 ```
 
+#### 39:
+事件捕获
+
+非标准ie不支持捕获
+标准ie和标准浏览器addEventListener(eventName, fn, isCapture)
+
+isCapture: false -> 冒泡 true -> 捕获
 
 如果有新发现，请继续补充
 
