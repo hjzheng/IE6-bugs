@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+        /*
+         第一种事件绑定形式的取消
+         */
+        function fn1() {
+            alert(1);
+        }
+        function fn2() {
+            alert(2);
+        }
+
+        //document.onclick = fn1;
+        //document.onclick = null;	//取消
+
+        /*
+         ie : obj.detachEvent(事件名称，事件函数);
+         标准 : obj.removeEventListener(事件名称，事件函数，是否捕获);
+         */
+        /*document.attachEvent('onclick', fn1);
+         document.attachEvent('onclick', fn2);
+         document.detachEvent('onclick', fn1);*/
+
+        /*function unBind(obj, eventName, fn){
+            if(obj.removeEventListener){
+                obj.removeEventListener(eventName, fn, false);
+            }else{
+                obj.detachEvent('on' + eventName, fn);
+            }
+        }
+        */
+        document.addEventListener('click', fn1, false);
+        document.addEventListener('click', fn1, true);
+        document.addEventListener('click', fn2, false);
+
+        document.removeEventListener('click', fn1, false);
+    </script>
+</head>
+
+<body>
+</body>
+</html>

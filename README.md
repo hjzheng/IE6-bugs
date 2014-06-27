@@ -339,6 +339,23 @@ function bind(obj, eventName, fn){
 
 isCapture: false -> 冒泡 true -> 捕获
 
+#### 40:
+事件取消
+
+- IE: detachEvent('on' + eventName, fn);
+- 标准: removeEventListener(eventName, fn, isCapture);
+
+兼容写法
+```javascript
+function unBind(obj, eventName, fn){
+    if(obj.removeEventListener){
+        obj.removeEventListener(eventName, fn, false);
+    }else{
+        obj.detachEvent('on' + eventName, fn);
+    }
+}
+```
+
 如果有新发现，请继续补充
 
 参考资料：
