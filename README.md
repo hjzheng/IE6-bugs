@@ -288,6 +288,20 @@ document.document.scrollHeight
 document.body.offsetHeight //所以推荐使用body.offsetHeight
 document.documentElement.offsetHeight //IE下不兼容，始终显示可视高度
 ```
+### Event 中的兼容性或bug
+
+#### 37:
+event对象
+
+- ie/chrome : event是一个内置全局对象
+- 标准下 : 事件对象是通过事件函数的第一个参数传入
+
+```javascript
+obj.onclick = function(evt) {
+    //兼容写法
+    var e = evt || window.event;
+}
+```
 
 
 如果有新发现，请继续补充

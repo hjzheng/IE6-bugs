@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.onclick = function (evt) {
+            //兼容写法
+            /*
+            - ie/chrome : event是一个内置全局对象
+            - 标准下 : 事件对象是通过事件函数的第一个参数传入
+            */
+            var e = evt || window.event;
+            alert("鼠标点击的坐标是 " + e.clientX + ", " + e.clientY);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
