@@ -302,6 +302,32 @@ obj.onclick = function(evt) {
     var e = evt || window.event;
 }
 ```
+#### 38:
+注册事件:
+
+- ie：obj.attachEvent(事件名称，事件函数);
+	* 没有捕获
+	* 事件名称有on
+	* 事件函数执行的顺序：标准ie ->正序   非标准ie ->倒序
+	* this指向window
+- 标准：obj.addEventListener(事件名称，事件函数，是否捕获);
+    * 有捕获
+	* 事件名称没有on
+    * 事件执行的顺序是正序
+    * this触发该事件的对象
+
+兼容写法:
+```javascript
+function bind(obj, eventName, fn){
+    if (obj.addEventListener) {
+        obj.addEventListener(eventName, fn, false);
+    } else {
+        obj.attachEvent("on"+eventName, function(){
+            fn.call(obj);
+        }); 
+    }
+}
+```
 
 
 如果有新发现，请继续补充
