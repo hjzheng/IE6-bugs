@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+        window.onload = function() {
+
+            var aInput = document.getElementsByTagName('input');
+
+            aInput[0].setCapture();
+            //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发
+
+            /*
+             ie : 有，并且有效果
+             ff : 有，但是没效果
+             chrome : 没有
+             */
+
+            aInput[0].onclick = function() {
+                alert(1);
+            }
+
+            aInput[1].onclick = function() {
+                alert(2);
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="按钮一" />
+<input type="button" value="按钮二" />
+</body>
+</html>
