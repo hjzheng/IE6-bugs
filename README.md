@@ -367,7 +367,9 @@ function unBind(obj, eventName, fn){
 - Chrome : 没有
 	
 
+
 如果有新发现，请继续补充
+
 
 参考资料：
 http://w3help.org/zh-cn/causes/index.html
