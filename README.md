@@ -366,7 +366,19 @@ function unBind(obj, eventName, fn){
 - FF : 有，但是没效果
 - Chrome : 没有
 	
+### 补充
 
+#### 42:
+getComputedStyle(object, false)
+
+非标准IE,没有该方法,object.currentStyle
+```javascript
+function getStyle(object, attr){
+    return object.currentStyle ? object.currentStyle[attr] : getComputedStyle(object, false)[attr]; 
+}
+
+getStyle(document.body, "width");
+```
 
 如果有新发现，请继续补充
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function () {
+            function getStyle(object, attr){
+                return object.currentStyle ? object.currentStyle[attr] : getComputedStyle(object, false)[attr];
+            }
+
+            console.log(getStyle(document.body, "width"));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
