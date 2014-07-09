@@ -380,6 +380,11 @@ function getStyle(object, attr){
 getStyle(document.body, "width");
 ```
 
+#### 43:
+onmouseenter 和 onmouseleave 方法
+IE下独有的方法，后来Chrome和Firefox加入该方法，用于处理onmouseover 和 onmouseout，子元素影响父元素问题
+
+
 如果有新发现，请继续补充
 
 

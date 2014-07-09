@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <style>
+        #div1{ width:200px; height:200px; background:red;}
+        #div2{ width:100px; height:100px; background:yellow;}
+    </style>
+    <script>
+
+        //解决方案:
+        //1.js :  onmouseenter onmouseleave ( 子级不会影响到父级 )
+
+        //最早 ie  firefox  chrome  , 做兼容非常的麻烦
+
+        //2.css  加一个层
+
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+
+            oDiv.onmouseover = function(){
+                document.title += '1';
+            };
+
+            oDiv.onmouseout = function(){
+                document.title += '2';
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+</body>
+</html>
