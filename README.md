@@ -306,7 +306,7 @@ obj.onclick = function(evt) {
 #### 38:
 注册事件:
 
-- ie：obj.attachEvent(事件名称，事件函数);
+- 非标准ie：obj.attachEvent(事件名称，事件函数);
 	* 没有捕获
 	* 事件名称有on
 	* 事件函数执行的顺序：标准ie ->正序   非标准ie ->倒序
