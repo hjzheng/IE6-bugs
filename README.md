@@ -389,7 +389,5 @@ IE下独有的事件，后来Chrome和Firefox加入该事件，用于处理onmou
 
 #### 参考资料：
 http://w3help.org/zh-cn/causes/index.html
-
-补充
 http://blog.163.com/hongshaoguoguo@126/blog/static/18046981201461824757380
 
